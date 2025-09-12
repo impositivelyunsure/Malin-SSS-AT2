@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36414.22 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Malin SSS AT2", "Malin SSS AT2.csproj", "{69C0FE69-C698-469D-B84B-960F66A18D45}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{69C0FE69-C698-469D-B84B-960F66A18D45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69C0FE69-C698-469D-B84B-960F66A18D45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69C0FE69-C698-469D-B84B-960F66A18D45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69C0FE69-C698-469D-B84B-960F66A18D45}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6496EE16-6700-48BA-8F9D-2B703EB5BF0C}
+	EndGlobalSection
+EndGlobal
