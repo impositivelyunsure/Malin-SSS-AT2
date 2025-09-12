@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         xmlns:local="clr-namespace:Malin_SSS_AT2"
         mc:Ignorable="d"
         Title="MainWindow" Height="552" Width="984">
@@ -33,7 +34,5 @@
         <Label Content="Distance" HorizontalAlignment="Left" Margin="519,48,0,0" VerticalAlignment="Top"/>
         <Label Content="Temperature" HorizontalAlignment="Left" Margin="683,51,0,0" VerticalAlignment="Top"/>
         <Label Content="Event Horizon Radius" HorizontalAlignment="Left" Margin="845,51,0,0" VerticalAlignment="Top"/>
-
-
     </Grid>
 </Window>

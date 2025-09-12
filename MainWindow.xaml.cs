@@ -9,11 +9,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace Malin_SSS_AT2
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -58,6 +56,11 @@ namespace Malin_SSS_AT2
 
         private void CustBackground_Click(object sender, RoutedEventArgs e)
         {
+            var colorDialog = new ColorChooserDialog();
+            if (colorDialog.ShowDialog() == true)
+            {
+                Background = new SolidColorBrush(colorDialog.SelectedColor);
+            }
 
         }
     }
