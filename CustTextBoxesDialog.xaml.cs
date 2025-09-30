@@ -15,19 +15,22 @@ using System.Windows.Shapes;
 
 namespace Malin_SSS_AT2
 {
-    /// <summary>
-    /// Interaction logic for CustTextBoxesDialog.xaml
-    /// </summary>
     public partial class CustTextBoxesDialog : Window
     {
+        public System.Windows.Media.Color SelectedColor { get; set; } = Colors.Aqua;
         public CustTextBoxesDialog()
         {
             InitializeComponent();
+            Picker.SelectedColor = SelectedColor;
         }
 
         private void Ok_Click(object sender, RoutedEventArgs e)
         {
-
+            if (Picker.SelectedColor.HasValue)
+            {
+                SelectedColor = Picker.SelectedColor.Value;
+            }
+            DialogResult = true;
         }
     }
 }

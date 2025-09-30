@@ -8,31 +8,36 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="552" Width="984">
     <Grid Margin="0,0,0,-6">
-        <TextBox Name="txtBoxObserved" HorizontalAlignment="Left" Margin="56,80,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="94"/>
-        <TextBox Name="txtBoxRest" HorizontalAlignment="Left" Margin="56,103,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="94"/>
-        <TextBox Name="txtBoxParallaxArcSec" HorizontalAlignment="Left" Margin="56,177,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="94"/>
-        <TextBox Name="txtBoxCelsius" HorizontalAlignment="Left" Margin="56,254,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="94"/>
-        <TextBox Name="txtBoxMass" HorizontalAlignment="Left" Margin="56,330,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="94"/>
+        <TextBox Name="txtBoxObserved" HorizontalAlignment="Left" Margin="56,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="94"/>
+        <TextBox Name="txtBoxRest" HorizontalAlignment="Left" Margin="56,103,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="94"/>
+        <TextBox Name="txtBoxParallaxArcSec" HorizontalAlignment="Left" Margin="56,177,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="94"/>
+        <TextBox Name="txtBoxCelsius" HorizontalAlignment="Left" Margin="56,254,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="94"/>
+        <TextBox Name="txtBoxMass" HorizontalAlignment="Left" Margin="56,330,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="94"/>
         <Button Name="btnCalcVelocity" Content="Calculate Star Velocity" HorizontalAlignment="Left" Margin="26,54,0,0" VerticalAlignment="Top" Click="btnCalcVelocity_Click" Width="154"/>
         <Button Name="btnCalcDistance" Content="Calculate Star Distance" HorizontalAlignment="Left" Margin="26,152,0,0" VerticalAlignment="Top" Click="btnCalcDistance_Click" Width="154"/>
         <Button Name="btnCalcTemp" Content="Calculate Star Temperature" HorizontalAlignment="Left" Margin="26,229,0,0" VerticalAlignment="Top" Click="btnCalcTemp_Click" Width="154"/>
         <Button Name="btnCalcEventHorizon" Content="Calculate Horizon Radius" HorizontalAlignment="Left" Margin="26,305,0,0" VerticalAlignment="Top" Click="btnCalcEventHorizon_Click" Width="154"/>
-        <ListBox Name="lstBoxVelocity" Margin="355,80,499,10"/>
-        <ListBox Name="lstBoxDistance" Margin="519,80,335,10"/>
-        <ListBox Name="lstBoxTemperature" Margin="683,80,171,10"/>
-        <ListBox Name="lstBoxHorizon" Margin="845,80,10,10"/>
+        <ListBox Name="lstBoxVelocity" Margin="337,80,517,28"/>
+        <ListBox Name="lstBoxDistance" Margin="501,80,353,28"/>
+        <ListBox Name="lstBoxTemperature" Margin="665,80,189,28"/>
+        <ListBox Name="lstBoxHorizon" Margin="827,80,28,28"/>
         <Menu VerticalAlignment="Top" Width="Auto" Height="30">
             <MenuItem Header="Customise">
                 <MenuItem Header="Text Boxes" Click="CustTextBoxes_Click"/>
                 <MenuItem Header="Buttons" Click="CustButtons_Click"/>
-                <MenuItem Header="List Boxes" Click="CustListBoxes_Click"/>
                 <MenuItem Header="Background" Click="CustBackground_Click"/>
+                <MenuItem Header="Labels" Click="CustLabels_Click"/>
             </MenuItem>
             <MenuItem Header="Change Language"></MenuItem>
         </Menu>
-        <Label Content="Velocity" HorizontalAlignment="Left" Margin="355,49,0,0" VerticalAlignment="Top"/>
-        <Label Content="Distance" HorizontalAlignment="Left" Margin="519,48,0,0" VerticalAlignment="Top"/>
-        <Label Content="Temperature" HorizontalAlignment="Left" Margin="683,51,0,0" VerticalAlignment="Top"/>
-        <Label Content="Event Horizon Radius" HorizontalAlignment="Left" Margin="845,51,0,0" VerticalAlignment="Top"/>
+        <Label Content="Velocity" HorizontalAlignment="Left" Margin="337,49,0,0" VerticalAlignment="Top"/>
+        <Label Content="Distance" HorizontalAlignment="Left" Margin="501,48,0,0" VerticalAlignment="Top"/>
+        <Label Content="Temperature" HorizontalAlignment="Left" Margin="665,51,0,0" VerticalAlignment="Top"/>
+        <Label Content="Event Horizon Radius" HorizontalAlignment="Left" Margin="827,51,0,0" VerticalAlignment="Top"/>
+        <Label Content="observed wave length" HorizontalAlignment="Left" Margin="155,76,0,0" VerticalAlignment="Top"/>
+        <Label Content="rest wave length" HorizontalAlignment="Left" Margin="155,99,0,0" VerticalAlignment="Top"/>
+        <Label Content="arc seconds" HorizontalAlignment="Left" Margin="67,195,0,0" VerticalAlignment="Top"/>
+        <Label Content="celsius" HorizontalAlignment="Left" Margin="81,272,0,0" VerticalAlignment="Top"/>
+        <Label Content="mass" HorizontalAlignment="Left" Margin="85,348,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>

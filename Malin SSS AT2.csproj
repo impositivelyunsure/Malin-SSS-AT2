@@ -13,6 +13,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AstroLibrary\AstroProcessorLib.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="AstroMathLib">
       <HintPath>..\AstroMath\bin\Debug\netstandard2.0\AstroMathLib.dll</HintPath>
     </Reference>

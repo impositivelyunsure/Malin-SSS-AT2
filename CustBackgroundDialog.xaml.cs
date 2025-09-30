@@ -14,11 +14,11 @@ using System.Windows.Shapes;
 
 namespace Malin_SSS_AT2
 {
-    public partial class ColorChooserDialog : Window
+    public partial class CustBackgroundDialog : Window
     {
-        public Color SelectedColor { get; set; } = Colors.Aqua;
+        public Color SelectedColor { get; set; }
 
-        public ColorChooserDialog()
+        public CustBackgroundDialog()
         {
             InitializeComponent();
             Picker.SelectedColor = SelectedColor;
@@ -27,8 +27,11 @@ namespace Malin_SSS_AT2
         private void Ok_Click(object sender, RoutedEventArgs e)
         {
             if (Picker.SelectedColor.HasValue)
+            {
                 SelectedColor = Picker.SelectedColor.Value;
-            DialogResult = true;   // closes as OK
+            }
+            DialogResult = true;
         }
+
     }
 }

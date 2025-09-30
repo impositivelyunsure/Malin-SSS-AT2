@@ -4,18 +4,36 @@
              xmlns:local="clr-namespace:Malin_SSS_AT2"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <FontFamily x:Key="GlobalTextBoxFont">Segoe UI</FontFamily>
-        <sys:Double x:Key="GlobalTextBoxFontSize"
+        <FontFamily x:Key="GlobalFamilyFont">Segoe UI</FontFamily>
+        <sys:Double x:Key="GlobalFamilySize"
               xmlns:sys="clr-namespace:System;assembly=mscorlib">12</sys:Double>
+        
         <SolidColorBrush x:Key="TextBoxForegroundBrush" Color="Black"/>
         <SolidColorBrush x:Key="TextBoxBackgroundBrush" Color="White"/>
 
-        <!-- apply to all TextBox -->
+        <SolidColorBrush x:Key="ButtonForegroundBrush" Color="Black"/>
+        <SolidColorBrush x:Key="ButtonBackgroundBrush" Color="White"/>
+
+        <SolidColorBrush x:Key="LabelForegroundBrush" Color="Black"/>
+        <SolidColorBrush x:Key="LabelBackgroundBrush" Color="White"/>
+
+        <Style TargetType="Label">
+            <Setter Property="FontFamily" Value="{DynamicResource GlobalFamilyFont}"/>
+            <Setter Property="FontSize"   Value="{DynamicResource GlobalFamilySize}"/>
+            <Setter Property="Foreground" Value="{DynamicResource LabelForegroundBrush}"/>
+            <Setter Property="Background" Value="{DynamicResource LabelBackgroundBrush}"/>
+        </Style>
+
         <Style TargetType="TextBox">
-            <Setter Property="FontFamily" Value="{DynamicResource GlobalTextBoxFont}"/>
-            <Setter Property="FontSize"   Value="{DynamicResource GlobalTextBoxFontSize}"/>
             <Setter Property="Foreground" Value="{DynamicResource TextBoxForegroundBrush}"/>
             <Setter Property="Background" Value="{DynamicResource TextBoxBackgroundBrush}"/>
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="FontFamily" Value="{DynamicResource GlobalFamilyFont}"/>
+            <Setter Property="FontSize"   Value="{DynamicResource GlobalFamilySize}"/>
+            <Setter Property="Foreground" Value="{DynamicResource ButtonForegroundBrush}"/>
+            <Setter Property="Background" Value="{DynamicResource ButtonBackgroundBrush}"/>
         </Style>
     </Application.Resources>
 </Application>
