@@ -13,31 +13,39 @@
         <TextBox Name="txtBoxParallaxArcSec" HorizontalAlignment="Left" Margin="56,177,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="94"/>
         <TextBox Name="txtBoxCelsius" HorizontalAlignment="Left" Margin="56,254,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="94"/>
         <TextBox Name="txtBoxMass" HorizontalAlignment="Left" Margin="56,330,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="94"/>
-        <Button Name="btnCalcVelocity" Content="Calculate Star Velocity" HorizontalAlignment="Left" Margin="26,54,0,0" VerticalAlignment="Top" Click="btnCalcVelocity_Click" Width="154"/>
-        <Button Name="btnCalcDistance" Content="Calculate Star Distance" HorizontalAlignment="Left" Margin="26,152,0,0" VerticalAlignment="Top" Click="btnCalcDistance_Click" Width="154"/>
-        <Button Name="btnCalcTemp" Content="Calculate Star Temperature" HorizontalAlignment="Left" Margin="26,229,0,0" VerticalAlignment="Top" Click="btnCalcTemp_Click" Width="154"/>
-        <Button Name="btnCalcEventHorizon" Content="Calculate Horizon Radius" HorizontalAlignment="Left" Margin="26,305,0,0" VerticalAlignment="Top" Click="btnCalcEventHorizon_Click" Width="154"/>
+
+        <Button Name="btnCalcVelocity" Content="{DynamicResource btnCalcVelocity}" HorizontalAlignment="Left" Margin="26,54,0,0" VerticalAlignment="Top" Click="btnCalcVelocity_Click" Width="209"/>
+        <Button Name="btnCalcDistance" Content="{DynamicResource btnCalcDistance}" HorizontalAlignment="Left" Margin="26,152,0,0" VerticalAlignment="Top" Click="btnCalcDistance_Click" Width="209"/>
+        <Button Name="btnCalcTemp" Content="{DynamicResource btnCalcTemp}" HorizontalAlignment="Left" Margin="26,229,0,0" VerticalAlignment="Top" Click="btnCalcTemp_Click" Width="209"/>
+        <Button Name="btnCalcEventHorizon" Content="{DynamicResource btnCalcEventHorizon}" HorizontalAlignment="Left" Margin="26,305,0,0" VerticalAlignment="Top" Click="btnCalcEventHorizon_Click" Width="209"/>
+        
         <ListBox Name="lstBoxVelocity" Margin="337,80,517,28"/>
         <ListBox Name="lstBoxDistance" Margin="501,80,353,28"/>
         <ListBox Name="lstBoxTemperature" Margin="665,80,189,28"/>
         <ListBox Name="lstBoxHorizon" Margin="827,80,28,28"/>
+        
         <Menu VerticalAlignment="Top" Width="Auto" Height="30">
-            <MenuItem Header="Customise">
-                <MenuItem Header="Text Boxes" Click="CustTextBoxes_Click"/>
-                <MenuItem Header="Buttons" Click="CustButtons_Click"/>
-                <MenuItem Header="Background" Click="CustBackground_Click"/>
-                <MenuItem Header="Labels" Click="CustLabels_Click"/>
+            <MenuItem Name="menuCustomise" Header="{DynamicResource menuCustomise}">
+                <MenuItem Name="menuTextBoxes" Header="{DynamicResource menuTextBoxes}" Click="CustTextBoxes_Click"/>
+                <MenuItem Name="menuButtons" Header="{DynamicResource menuButtons}" Click="CustButtons_Click"/>
+                <MenuItem Name="menuBackground" Header="{DynamicResource menuBackground}" Click="CustBackground_Click"/>
+                <MenuItem Name="menuLabels" Header="{DynamicResource menuLabels}" Click="CustLabels_Click"/>
             </MenuItem>
-            <MenuItem Header="Change Language"></MenuItem>
+            <MenuItem Header="{DynamicResource menuChangeLanguage}">
+                <MenuItem Name="menuEnglish" Header="{DynamicResource menuEnglish}" Click="CustLanguageEnglish_Click"/>
+                <MenuItem Name="menuFrench" Header="{DynamicResource menuFrench}" Click="CustLanguageFrench_Click"/>
+                <MenuItem Name="menuGerman" Header="{DynamicResource menuGerman}"  Click="CustLanguageGerman_Click"/>
+            </MenuItem>
         </Menu>
-        <Label Content="Velocity" HorizontalAlignment="Left" Margin="337,49,0,0" VerticalAlignment="Top"/>
-        <Label Content="Distance" HorizontalAlignment="Left" Margin="501,48,0,0" VerticalAlignment="Top"/>
-        <Label Content="Temperature" HorizontalAlignment="Left" Margin="665,51,0,0" VerticalAlignment="Top"/>
-        <Label Content="Event Horizon Radius" HorizontalAlignment="Left" Margin="827,51,0,0" VerticalAlignment="Top"/>
-        <Label Content="observed wave length" HorizontalAlignment="Left" Margin="155,76,0,0" VerticalAlignment="Top"/>
-        <Label Content="rest wave length" HorizontalAlignment="Left" Margin="155,99,0,0" VerticalAlignment="Top"/>
-        <Label Content="arc seconds" HorizontalAlignment="Left" Margin="67,195,0,0" VerticalAlignment="Top"/>
-        <Label Content="celsius" HorizontalAlignment="Left" Margin="81,272,0,0" VerticalAlignment="Top"/>
-        <Label Content="mass" HorizontalAlignment="Left" Margin="85,348,0,0" VerticalAlignment="Top"/>
+
+        <Label Name="lblVelocity" Content="{DynamicResource lblVelocity}" HorizontalAlignment="Left" Margin="337,49,0,0" VerticalAlignment="Top"/>
+        <Label Name="lblDistance" Content="{DynamicResource lblDistance}" HorizontalAlignment="Left" Margin="501,48,0,0" VerticalAlignment="Top"/>
+        <Label Name="lblTemperature" Content="{DynamicResource lblTemperature}" HorizontalAlignment="Left" Margin="665,51,0,0" VerticalAlignment="Top"/>
+        <Label Name="lblHorRadius" Content="{DynamicResource lblHorRadius}" HorizontalAlignment="Left" Margin="827,51,0,0" VerticalAlignment="Top"/>
+        <Label Name="lblObsWaveLength" Content="{DynamicResource lblObsWaveLength}" HorizontalAlignment="Left" Margin="155,76,0,0" VerticalAlignment="Top"/>
+        <Label Name="lblRestWaveLength" Content="{DynamicResource lblRestWaveLength}" HorizontalAlignment="Left" Margin="155,99,0,0" VerticalAlignment="Top"/>
+        <Label Name="lblArcSec" Content="{DynamicResource lblArcSec}" HorizontalAlignment="Left" Margin="67,195,0,0" VerticalAlignment="Top"/>
+        <Label Name="lblTemp" Content="{DynamicResource lblTemp}" HorizontalAlignment="Left" Margin="81,272,0,0" VerticalAlignment="Top"/>
+        <Label Name="lblMass" Content="{DynamicResource lblMass}" HorizontalAlignment="Left" Margin="85,348,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>

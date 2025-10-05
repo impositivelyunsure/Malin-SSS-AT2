@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Malin SSS AT2", "Malin SSS 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AstroProcessorLib", "..\AstroLibrary\AstroProcessorLib.csproj", "{A5A630EB-52D4-4077-B1DC-797E8270164B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Astro.Contracts", "..\Astro.Contracts\Astro.Contracts.csproj", "{7453C3BE-04B1-46FB-8077-888A8C7AA64F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{A5A630EB-52D4-4077-B1DC-797E8270164B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5A630EB-52D4-4077-B1DC-797E8270164B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A5A630EB-52D4-4077-B1DC-797E8270164B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7453C3BE-04B1-46FB-8077-888A8C7AA64F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7453C3BE-04B1-46FB-8077-888A8C7AA64F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7453C3BE-04B1-46FB-8077-888A8C7AA64F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7453C3BE-04B1-46FB-8077-888A8C7AA64F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

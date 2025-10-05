@@ -1,4 +1,5 @@
 ﻿using AstroLibrary;
+using System.Diagnostics;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -16,7 +17,7 @@ namespace Malin_SSS_AT2
     public partial class MainWindow : Window
     {
         AstroProcessor processorObj = new AstroProcessor();
-
+        AstroFrontendProcessor frontProcessorObj = new AstroFrontendProcessor();
         public MainWindow()
         {
             InitializeComponent();
@@ -24,163 +25,64 @@ namespace Malin_SSS_AT2
 
         private void btnCalcVelocity_Click(object sender, RoutedEventArgs e)
         {
-            if (Double.TryParse(txtBoxObserved.Text, out double resultObs))
-            {
-                if (Double.TryParse(txtBoxRest.Text, out double resultRest))
-                {
-                    processorObj.AddVelocity(resultObs, resultRest);
-                    DisplayVelocity();
-                    ClearTextBoxes();
-                }
-                else
-                {
-                    MessageBox.Show("Input Error", "Rest wave length input is not a valid number", MessageBoxButton.OK);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Input Error", "Observed wave length input is not a valid number", MessageBoxButton.OK);
-            }
+            processorObj.AddVelocity(txtBoxObserved.Text, txtBoxRest.Text);
+            frontProcessorObj.DisplayVelocity((MainWindow)MainWindow.GetWindow(this), processorObj);
+            frontProcessorObj.ClearTextBoxes((MainWindow)MainWindow.GetWindow(this));
         }
 
         private void btnCalcDistance_Click(object sender, RoutedEventArgs e)
         {
-            if (Double.TryParse(txtBoxParallaxArcSec.Text, out double resultArcSec))
-            {
-                processorObj.AddDistance(resultArcSec);
-                DisplayDistance();
-                ClearTextBoxes();
-            }
-            else
-            {
-                MessageBox.Show("Input Error", "Parallax Arc Seconds input is not a valid number", MessageBoxButton.OK);
-            }
+            processorObj.AddDistance(txtBoxParallaxArcSec.Text);
+            frontProcessorObj.DisplayDistance((MainWindow)MainWindow.GetWindow(this), processorObj);
+            frontProcessorObj.ClearTextBoxes((MainWindow)MainWindow.GetWindow(this));
         }
 
         private void btnCalcTemp_Click(object sender, RoutedEventArgs e)
         {
-            if (Double.TryParse(txtBoxCelsius.Text, out double resultTemp))
-            {
-                processorObj.AddTemp(resultTemp);
-                DisplayTemperature();
-                ClearTextBoxes();
-            }
-            else
-            {
-                MessageBox.Show("Input Error", "Celsius input is not a valid number", MessageBoxButton.OK);
-            }
+            processorObj.AddTemperature(txtBoxCelsius.Text);
+            frontProcessorObj.DisplayTemperature((MainWindow)MainWindow.GetWindow(this), processorObj);
+            frontProcessorObj.ClearTextBoxes((MainWindow)MainWindow.GetWindow(this));
         }
 
         private void btnCalcEventHorizon_Click(object sender, RoutedEventArgs e)
         {
-            if (Double.TryParse(txtBoxMass.Text, out double resultHor))
-            {
-                processorObj.AddEventHorizon(resultHor);
-                DisplayEventHorizon();
-                ClearTextBoxes();
-            }
-            else
-            {
-                MessageBox.Show("Input Error", "Mass input is not a valid number", MessageBoxButton.OK);
-            }
+            processorObj.AddEventHorizon(txtBoxMass.Text);
+            frontProcessorObj.DisplayEventHorizon((MainWindow)MainWindow.GetWindow(this), processorObj);
+            frontProcessorObj.ClearTextBoxes((MainWindow)MainWindow.GetWindow(this));
         }
 
         private void CustTextBoxes_Click(object sender, RoutedEventArgs e)
         {
-            var txtBoxesDialog = new CustTextBoxesDialog();
-            if (txtBoxesDialog.ShowDialog() == true)
-            {
-                Application.Current.Resources["TextBoxBackgroundBrush"] = new SolidColorBrush(txtBoxesDialog.SelectedColor);
-            }
+            frontProcessorObj.CustomiseTextBoxes();
         }
 
         private void CustButtons_Click(object sender, RoutedEventArgs e)
         {
-            var buttonsDialog = new CustButtonsDialog();
-            if (buttonsDialog.ShowDialog() == true)
-            {
-                Application.Current.Resources["ButtonBackgroundBrush"] = new SolidColorBrush(buttonsDialog.SelectedColor);
-            }
+            frontProcessorObj.CustomiseButtons();
         }
 
         private void CustBackground_Click(object sender, RoutedEventArgs e)
         {
-            var colorDialog = new CustBackgroundDialog();
-            if (colorDialog.ShowDialog() == true)
-            {
-                Background = new SolidColorBrush(colorDialog.SelectedColor);
-            }
+            frontProcessorObj.CustomiseBackground((MainWindow)MainWindow.GetWindow(this));
         }
 
         private void CustLabels_Click(object sender, RoutedEventArgs e)
         {
-            var labelsDialog = new CustLabelsDialog();
-            if (labelsDialog.ShowDialog() == true)
-            {
-                Application.Current.Resources["LabelBackgroundBrush"] = new SolidColorBrush(labelsDialog.SelectedColor);
-                Application.Current.Resources["GlobalFamilyFont"] = labelsDialog.SelectedFont;
-                Application.Current.Resources["GlobalFamilySize"] = labelsDialog.SelectedSize;
-            }
+            frontProcessorObj.CustomiseLabels();
+        }
+        private void CustLanguageEnglish_Click(object sender, RoutedEventArgs e)
+        {
+            frontProcessorObj.SetLanguage("Resources/Strings.en.xaml");
         }
 
-        public void DisplayVelocity()
+        private void CustLanguageFrench_Click(object sender, RoutedEventArgs e)
         {
-            if (lstBoxVelocity.Items.Count > 0)
-            {
-                lstBoxVelocity.Items.Clear();
-            }
-
-            foreach (var value in processorObj.velocityList)
-            {
-                lstBoxVelocity.Items.Add(value);
-            }
-        }
-        public void DisplayDistance()
-        {
-            if (lstBoxDistance.Items.Count > 0)
-            {
-                lstBoxDistance.Items.Clear();
-            }
-
-            foreach (var value in processorObj.distanceList)
-            {
-                lstBoxDistance.Items.Add(value);
-            }
-        }
-        public void DisplayTemperature()
-        {
-            if (lstBoxTemperature.Items.Count > 0)
-            {
-                lstBoxTemperature.Items.Clear();
-            }
-
-
-            foreach (var value in processorObj.temperatureList)
-            {
-                lstBoxTemperature.Items.Add(value);
-            }
-        }
-        public void DisplayEventHorizon()
-        {
-            if (lstBoxHorizon.Items.Count > 0)
-            {
-                lstBoxHorizon.Items.Clear();
-            }
-
-
-            foreach (var value in processorObj.eventHorList)
-            {
-                lstBoxHorizon.Items.Add(value);
-            }
+            frontProcessorObj.SetLanguage("Resources/Strings.fr.xaml");
         }
 
-        public void ClearTextBoxes()
+        private void CustLanguageGerman_Click(object sender, RoutedEventArgs e)
         {
-            txtBoxObserved.Text = "";
-            txtBoxRest.Text = "";
-            txtBoxParallaxArcSec.Text = "";
-            txtBoxCelsius.Text = "";
-            txtBoxMass.Text = "";
+            frontProcessorObj.SetLanguage("Resources/Strings.de.xaml");
         }
     }
 }
