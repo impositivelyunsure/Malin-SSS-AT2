@@ -1,0 +1,28 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="lblVelocity">Vitesse</sys:String>
+  <sys:String x:Key="lblDistance">Distance</sys:String>
+  <sys:String x:Key="lblTemperature">Température</sys:String>
+  <sys:String x:Key="lblHorRadius">Rayon de l’horizon</sys:String>
+  <sys:String x:Key="lblObsWaveLength">longueur d’onde observée</sys:String>
+  <sys:String x:Key="lblRestWaveLength">longueur d’onde au repos</sys:String>
+  <sys:String x:Key="lblArcSec">secondes d’arc</sys:String>
+  <sys:String x:Key="lblTemp">celsius</sys:String>
+  <sys:String x:Key="lblMass">masse</sys:String>
+
+  <sys:String x:Key="btnCalcVelocity">Calculer la vitesse stellaire</sys:String>
+  <sys:String x:Key="btnCalcDistance">Calculer la distance stellaire</sys:String>
+  <sys:String x:Key="btnCalcTemp">Calculer la température stellaire</sys:String>
+  <sys:String x:Key="btnCalcEventHorizon">Calculer le rayon de l’horizon</sys:String>
+
+  <sys:String x:Key="menuCustomise">Personnaliser</sys:String>
+  <sys:String x:Key="menuTextBoxes">Zones de texte</sys:String>
+  <sys:String x:Key="menuButtons">Boutons</sys:String>
+  <sys:String x:Key="menuBackground">Arrière-plan</sys:String>
+  <sys:String x:Key="menuLabels">Libellés</sys:String>
+  <sys:String x:Key="menuChangeLanguage">Changer de langue</sys:String>
+  <sys:String x:Key="menuEnglish">Anglais (R.-U.)</sys:String>
+  <sys:String x:Key="menuFrench">Français</sys:String>
+  <sys:String x:Key="menuGerman">Allemand</sys:String>
+</ResourceDictionary>

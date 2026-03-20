@@ -1,0 +1,28 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="lblVelocity">Geschwindigkeit</sys:String>
+  <sys:String x:Key="lblDistance">Entfernung</sys:String>
+  <sys:String x:Key="lblTemperature">Temperatur</sys:String>
+  <sys:String x:Key="lblHorRadius">Ereignishorizont-Radius</sys:String>
+  <sys:String x:Key="lblObsWaveLength">beobachtete Wellenlänge</sys:String>
+  <sys:String x:Key="lblRestWaveLength">Ruhewellenlänge</sys:String>
+  <sys:String x:Key="lblArcSec">Bogensekunden</sys:String>
+  <sys:String x:Key="lblTemp">Celsius</sys:String>
+  <sys:String x:Key="lblMass">Masse</sys:String>
+
+  <sys:String x:Key="btnCalcVelocity">Stern­geschwindigkeit berechnen</sys:String>
+  <sys:String x:Key="btnCalcDistance">Stern­entfernung berechnen</sys:String>
+  <sys:String x:Key="btnCalcTemp">Stern­temperatur berechnen</sys:String>
+  <sys:String x:Key="btnCalcEventHorizon">Ereignishorizont­radius berechnen</sys:String>
+
+  <sys:String x:Key="menuCustomise">Anpassen</sys:String>
+  <sys:String x:Key="menuTextBoxes">Textfelder</sys:String>
+  <sys:String x:Key="menuButtons">Schaltflächen</sys:String>
+  <sys:String x:Key="menuBackground">Hintergrund</sys:String>
+  <sys:String x:Key="menuLabels">Beschriftungen</sys:String>
+  <sys:String x:Key="menuChangeLanguage">Sprache ändern</sys:String>
+  <sys:String x:Key="menuEnglish">Englisch (UK)</sys:String>
+  <sys:String x:Key="menuFrench">Französisch</sys:String>
+  <sys:String x:Key="menuGerman">Deutsch</sys:String>
+</ResourceDictionary>
